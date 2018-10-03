@@ -1,0 +1,42 @@
+import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.eventloop.opmode.OpMode;
+import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.DcMotorSimple;
+import com.qualcomm.robotcore.hardware.HardwareMap;
+import com.qualcomm.robotcore.util.ElapsedTime;
+
+import org.firstinspires.ftc.robotcontroller.external.samples.HardwarePushbot;
+
+@Autonomous(name="Autonomous", group="Autobot")
+
+
+
+public class Autonomous7128 extends LinearOpMode {
+    HardwarePushbot robot = new HardwarePushbot();
+    private ElapsedTime runtime = new ElapsedTime();
+    @Override
+    private DcMotor leftDrive;
+    private DcMotor rightDrive;
+    private ElapsedTime runtime = new ElapsedTime();
+
+
+    public void init() {
+       telemetry.addData("Status", "Initalized");
+       leftDrive.setDirection(DcMotor.Direction.FORWARD);
+       rightDrive.setDirection(DcMotorSimple.Direction.REVERSE);
+       leftDrive = hardwareMap.get(DcMotor.class, "left_drive");
+       rightDrive = hardwareMap.get(DcMotor.class, "right_drive");
+       telemetry.addData("Status", "Initialized");
+
+    }
+    @Override
+    public void start {
+
+    }
+    @Override
+    public void loop {
+
+    }
+
+}
